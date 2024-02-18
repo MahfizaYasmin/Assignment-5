@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <!-- daisy UI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- google fonts inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- tailwind custom class -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'bus-text-primary': '#1dd100',
+                        'new-bg': '#ffbf0f',
+                        'couple-bg': '#f78c9c',
+                        'bus-bg-primary': '#f7f8f8',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- custom css -->
+    <style>
+        .font-raleway {
+            font-family: "Raleway", sans-serif;
+        }
+
+        .font-inter {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="">
+    <!-- header section -->
+    <header class="container mx-auto lg:px-32 px-8 py-8 lg:mb-28">
+        <!-- navbar -->
+        <div class="navbar bg-base-100 font-raleway">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <a class="normal-case text-xl font-extrabold lg:text-4xl">P-Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-base">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn bg-green-100 text-bus-text-primary text-lg font-bold">Get Ticket <img
+                        src="./images/bus-icon.png"></a>
+
+            </div>
+        </div>
+        <!-- banner section -->
+        <div class="hero h-[200px] lg:h-[550px] overflow-hidden rounded-2xl mt-10"
+            style="background-image: url(./images/banner.png);">
+            <div class="hero-overlay bg-opacity-20"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="">
+                    <h1 class="mb-1 lg:mb-5 text-white text-xl lg:text-5xl font-extrabold font-raleway">End-to-End
+                        Travel with</h1>
+                    <h1 class="mb-1 lg:mb-5 text-bus-text-primary text-xl lg:text-5xl font-extrabold font-raleway">P
+                        Paribahan</h1>
+                    <p class="mb-1 lg:mb-5 text-sm lg:text-lg">Yes, you can run unit tests and view the results directly
+                        within the app. The <br> integrated testing features allow for a streamlined .</p>
+                    <button class="btn bg-bus-text-primary border-none text-black text-xl font-bold">Buy Tickets</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main section -->
+    <main>
+        <!-- best offer -->
+        <section class="container mx-auto lg:px-32 px-8 py-8 lg:mb-28">
+            <h2 class="text-4xl font-bold text-center mb-12">Best offers for you</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+                <div class="flex bg-new-bg rounded-2xl">
+                    <div class="p-12 font-inter">
+                        <h2 class="text-5xl font-bold">15% OFF</h2>
+                        <h3 class="text-xl font-semibold py-3">on your next purchase</h3>
+                        <p>use by January 2024</p>
+                    </div>
+                    <img class="pl-9" src="./images/cupon-devider.png">
+                    <div class="font-raleway px-5 pt-20">
+                        <h2 class="text-3xl font-bold pb-3">NEW15</h2>
+                        <p class="text-xl font-medium">Coupon Code</p>
+                    </div>
+                </div>
+                <div class="flex bg-couple-bg rounded-2xl">
+                    <div class="p-12 font-inter">
+                        <h2 class="text-5xl font-bold">20% OFF</h2>
+                        <h3 class="text-xl font-semibold py-3">on your next purchase</h3>
+                        <p>use by January 2024</p>
+                    </div>
+                    <img class="pl-9" src="./images/cupon-devider.png">
+                    <div class="font-raleway text-center px-5 pt-20">
+                        <h2 class="text-3xl font-bold pb-3">Couple 20</h2>
+                        <p class="text-xl font-medium">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn border-2 border-bus-text-primary bg-slate-50 text-xl font-bold text-bus-text-primary mt-12">See All Offers</button>
+            </div>
+        </section>
+        <!-- bus & ticket info section -->
+        <section class="w-full bgbus-bg-primary">
+            <h2 class="text-4xl font-bold text-center mb-10">P.H Paribahan</h2>
+            <p class="text-center">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
+            <div>
+                <div>
+                    <div>
+                        <img src>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+        </section>
+    </main>
+    <!-- footer section -->
+    <footer class="footer px-10 py-10 lg:py-24 lg:px-28  text-neutral-content lg:justify-evenly">
+        
+      </footer>
+</body>
+
+</html>

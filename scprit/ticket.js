@@ -18,6 +18,12 @@ function ticketDetails() {
     const numberInput = document.getElementById("number");
     const mailInput = document.getElementById("mail");
 
+    // Scroll to the section
+    const buyTicket = document.getElementById('btn-buy-ticket').addEventListener('click', function(){
+        const paribahanSection = document.getElementById('paribahan-section');
+        paribahanSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
     function handleSeatSelection(seat) {
         if (selectedSeats.length >= 4 || selectedSeats.includes(seat.textContent)) {
             // Display error message or prevent further selection

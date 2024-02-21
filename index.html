@@ -154,7 +154,7 @@
                                 </div>
                             </div>
                             <div>
-                                <a class="btn bg-green-100 text-bus-text-primary text-lg font-bold"> <img src="./images/seat-gray.png"> <span id="total-seats">40</span> Seats left</a>
+                                <a class="btn bg-green-100 text-bus-text-primary text-lg font-bold"> <img src="./images/seat-gray.png"> <span id="total-seat">40</span> Seats left</a>
                             </div>
                         </div>
                         <div class="bg-bus-bg-primary mt-4 rounded-2xl px-10">
@@ -190,7 +190,7 @@
                 </div>
                 <!-- seat section -->
                 <div class="flex bg-white rounded-2xl mt-9 py-10">
-                    <div class="border border-l-0 border-t-0 border-b-0 border-r-2 border-dashed px-10 w-full">
+                    <div id="seat-section" class="border border-l-0 border-t-0 border-b-0 border-r-2 border-dashed px-10 w-full">
                         <h3 class="text-2xl font-semibold pb-6">Select Your Seat</h3>
                         <div class="border border-t-2 border-b-2 border-l-0 border-r-0 border-dashed items-center py-8">
                             <div class="flex justify-between">
@@ -310,36 +310,36 @@
                                     <p class="font-medium">Price</p>
                                 </div>
                                 <div class="flex justify-between border border-l-0 border-t-0 border-r-0 border-b-2 border-solid py-3">
-                                    <p>c2</p>
-                                    <p>Economoy</p>
-                                    <p>550</p>
+                                    <p id="select-seat"></p>
+                                    <p id="class-name"></p>
+                                    <p id="price"></p>
                                 </div>
                                 <div class="flex justify-between pt-4">
                                     <p class="font-medium">Total Price</p>
-                                    <p class="font-medium">BDT <span> 1100</span></p>
+                                    <p class="font-medium">BDT <span class="total-price">0</span></p>
                                 </div>
-                                <div class="relative">
-                                    <input type="text" placeholder="Have any copupon?" class="py-5 w-full pl-6 mt-4 rounded-2xl">
-                                    <button class="btn bg-bus-text-primary absolute text-white font-semibold top-6 right-2">Apply</button>
+                                <div id="discount-input" class="relative">
+                                    <input id="discount" type="text" placeholder="Have any copupon?" class="py-5 w-full pl-6 mt-4 rounded-2xl">
+                                    <button id="btn-apply" class="btn bg-bus-text-primary absolute text-white font-semibold top-6 right-2">Apply</button>
                                 </div>
                                 <div class="flex justify-between pt-5">
                                     <p class="font-medium">Grand Total</p>
-                                    <p class="font-medium">BDT <span> 1100</span></p>
+                                    <p class="font-medium">BDT <span id="grand-price">0</span></p>
                                 </div>
                             </div>
                             <div class="mt-6">
                                 <label class="font-semibold">Passenger Name*</label>
-                                <input type="text" placeholder="Enter your name" class="py-5 w-full border border-2 rounded-2xl pl-6 mt-4">
+                                <input id="name" type="text" placeholder="Enter your name" class="py-5 w-full border border-2 rounded-2xl pl-6 mt-4">
                             </div>
                             <div class="mt-6">
                                 <label class="font-semibold">Phone Number*</label>
-                                <input type="number" placeholder="Enter your phone number" class="py-5 w-full border border-2 rounded-2xl pl-6 mt-4">
+                                <input id="number" type="number" placeholder="Enter your phone number" class="py-5 w-full border border-2 rounded-2xl pl-6 mt-4">
                             </div>
                             <div class="mt-6">
                                 <label class="font-semibold">Email ID</label>
-                                <input type="email" placeholder="Enter your email id" class="py-5 w-full border border-2 rounded-2xl pl-6 mt-4">
+                                <input id="mail" type="email" placeholder="Enter your email id" class="py-5 w-full border border-2 rounded-2xl pl-6 mt-4">
                             </div>
-                            <label for="my_modal_6" class="btn bg-bus-text-primary text-white font-extrabold text-xl py-2 w-full mt-4">Next</label> 
+                            <label id="btn-next" for="my_modal_6" class="btn bg-bus-text-primary text-white font-extrabold text-xl py-2 w-full mt-4">Next</label> 
 
                                 <!-- Put this part before-->
                                 <input type="checkbox" id="my_modal_6" class="modal-toggle"/>

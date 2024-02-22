@@ -12,7 +12,7 @@ function ticketDetails() {
     const totalPrice = document.querySelector(".total-price");
     const discountInput = document.getElementById("discount");
     const applyBtn = document.getElementById("btn-apply");
-    
+    const grandPrice = document.getElementById("grand-price");
     const btnNext = document.getElementById("btn-next");
     const nameInput = document.getElementById("name");
     const numberInput = document.getElementById("number");
@@ -47,7 +47,6 @@ function ticketDetails() {
 
     function calculateTotalPrice() {
         let total = selectedSeats.length * parseInt(550);
-        const grandPrice = document.getElementById("grand-price");
         grandPrice.innerText = total;
 
         return total;
@@ -85,7 +84,7 @@ function ticketDetails() {
 
     applyBtn.addEventListener("click", applyDiscount);
 
-//    clear input text
+    // cleae input value
     btnNext.addEventListener("click", function() {
         nameInput.value = "";
         numberInput.value = "";

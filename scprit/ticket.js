@@ -12,27 +12,27 @@ function ticketDetails() {
     const totalPrice = document.querySelector(".total-price");
     const discountInput = document.getElementById("discount");
     const applyBtn = document.getElementById("btn-apply");
-    const grandPrice = document.getElementById("grand-price");
+    
     const btnNext = document.getElementById("btn-next");
     const nameInput = document.getElementById("name");
     const numberInput = document.getElementById("number");
     const mailInput = document.getElementById("mail");
-
+    
     // Scroll to the section
     const buyTicket = document.getElementById('btn-buy-ticket').addEventListener('click', function(){
         const paribahanSection = document.getElementById('paribahan-section');
         paribahanSection.scrollIntoView({ behavior: 'smooth' });
     });
-
+    
     function handleSeatSelection(seat) {
-        if (selectedSeats.length >= 4 || selectedSeats.includes(seat.textContent)) {
+        if (selectedSeats.length >= 4 || selectedSeats.includes(seat.innerText)) {
             // Display error message or prevent further selection
             alert('You can only select 4 seats and not one set selected multipule time.');
             return;
         }
 
         seat.classList.add("bg-bus-text-primary", "text-white");
-        selectedSeats.push(seat.textContent);
+        selectedSeats.push(seat.innerText);
         selectedClassName.push("Economoy");
         selectedPrice.push("550");
 
@@ -47,20 +47,26 @@ function ticketDetails() {
 
     function calculateTotalPrice() {
         let total = selectedSeats.length * parseInt(550);
+        const grandPrice = document.getElementById("grand-price");
+        grandPrice.innerText = total;
+
         return total;
     }
 
     function calculateGrandTotalPrice() {
+        
         let grandTotal = calculateTotalPrice();
         if (discountInput.value === "NEW15") {
             grandTotal = grandTotal - (grandTotal / 100 * 15); // 15% discount 
             const discountInput = document.getElementById('discount-input');
             discountInput.style.display = 'none';
-        } else if (discountInput.value === "Couple 20") {
+        } 
+        else if (discountInput.value === "Couple 20") {
             grandTotal = grandTotal - (grandTotal / 100 * 20); // 20% discount
             const discountInput = document.getElementById('discount-input');
             discountInput.style.display = 'none';
         }
+
         return grandTotal;
     }
 
@@ -79,6 +85,13 @@ function ticketDetails() {
 
     applyBtn.addEventListener("click", applyDiscount);
 
+//    clear input text
+    btnNext.addEventListener("click", function() {
+        nameInput.value = "";
+        numberInput.value = "";
+        mailInput.value = "";
+    });
+    
 }
 
 ticketDetails(); // Call the function
